@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+body {
+  background: #005f3c;
+  /* Verde oscuro estilo tapete de casino */
+}
+
+.fondo {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #ffd700;
+  /* Dorado */
+  font-weight: bold;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CARTAS */
+.cartas_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.cartas {
+  width: 180px;
+  height: 250px;
+  background: #222;
+  border-radius: 10px;
+  border: 3px solid #ffd700;
+  /* Marco dorado */
+  transition: transform 0.2s, border-color 0.3s;
+  position: relative;
+}
+
+.cartas:hover {
+  transform: scale(1.05);
+}
+
+.carta {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #d72638;
+  /* Rojo intenso */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+
+.carta p {
+  color: #ffd700;
+  /* Dorado para el texto */
+}
+
+/* BOTÓN ESTILO CASINO */
+#start-button {
+  background: #ffd700;
+  color: #0a0a0a;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s;
+}
+
+#start-button:hover {
+  background: #d72638;
+  /* Rojo casino */
+  color: #ffd700;
+}
