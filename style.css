@@ -33,8 +33,9 @@ body {
   margin: 16px;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
-.participantes form{
+.participantes .form{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -134,7 +135,7 @@ h2 {
   transition: all 0.3s;
 }
 
-#start-button:hover {
+.btn:hover {
   background: #d72638;
   /* Rojo casino */
   color: #ffd700;

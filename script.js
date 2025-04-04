@@ -7,7 +7,7 @@
 
 
 // 1 Crear el array
-const alumnos = [
+const alumnosPresentes = [
     "Rosa",
     "Ruben",
     "Adrián",
@@ -33,11 +33,9 @@ function insertarCarta(textoCarta) {
     carta.innerHTML = `<p>${textoCarta}</p>`
 
     const cartas = document.querySelector(".cartas")
-
     cartas.appendChild(carta)
 }
-
-alumnos.forEach(alumno => insertarCarta(alumno))
+alumnosPresentes.forEach(alumno => insertarCarta(alumno))
 
 // elegir una carta de manera aleatoria
 
@@ -58,3 +56,20 @@ function sacarCartaAleatoria() {
 const btn = document.querySelector("#start-button")
 // Añadirle funcionalidad
 btn.addEventListener("click", sacarCartaAleatoria)
+
+
+// Capturar el input
+function capturarAlumnos(alumnosPresentes){
+    let arrayAlumnos = document.querySelectorAll("input")
+    alumnosPresentes = []
+    arrayAlumnos.forEach(alumno => {
+        if(alumno.checked){
+            alumnosPresentes.push(alumno.value)
+        }
+    })
+    document.querySelector(".cartas").innerHTML = ""
+    alumnosPresentes.forEach(alumno => insertarCarta(alumno))
+}
+
+const btnAlumnos = document.querySelector("#btn_alumnos")
+btnAlumnos.addEventListener("click", () => capturarAlumnos(alumnosPresentes))
