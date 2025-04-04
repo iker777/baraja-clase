@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baraja de cartas</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="fondo">
+    <section class="participantes">
+      <h2>Alumnos en clase</h2>
+      <form>
+        <label for="alumnos">
+          <input name="alumnos" type="checkbox" value="Liz" checked>
+          Liz
+        </label>
+        <label for="alumnos"><input name="alumnos" type="checkbox" value="Nino" checked>Nino</label>
+        <button id="btn_alumnos" class=" btn">Añadir alumnos en clase</button>
+      </form>
+    </section>
     <header class="header">
       <h1>¿Quién va a salir?</h1>
     </header>
     <main class="main">
       <section class="cartas_container">
         <div class="cartas">
-          <div class="carta">
-            <p>Iker</p>
-          </div>
         </div>
       </section>
       <section>
-        <button id="start-button">Baraja y saca una carta</button>
+        <button class="btn" id="start-button">Baraja y saca una carta</button>
       </section>
       <script src="script.js"></script>
     </main>
   </div>
 </body>
+
 </html>
